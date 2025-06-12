@@ -23,10 +23,16 @@ int main()
             temp[count++] = arr[i];
         }
     }
+    if(count == 0)
+    {
+        cout << -1;
+        return (0);
+    }
 
     int minval = *min_element(temp,temp + count);
     for(i = 0; i < count; i++)
         sum += temp[i];
     cout << sum << endl << minval;
+    return (0);
 
 }
